@@ -33,7 +33,7 @@ This repository contains the source code of his personal portfolio website, **[r
 | --- | --- |
 | **Name** | Rahad Arefin |
 | **Profession** | Growth marketing leader, digital marketing manager |
-| **Current role** | Digital Marketing Manager, Sylvex Innovation (Sydney, Australia, remote) |
+| **Current role** | Digital Marketing Manager, Sylvex Innovation (Sydney, Australia) |
 | **Based in** | Dhaka, Bangladesh |
 | **Markets** | USA, Canada, United Kingdom, Australia, Bangladesh |
 | **Experience** | 8+ years (since 2018) |
