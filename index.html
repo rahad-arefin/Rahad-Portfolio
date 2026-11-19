@@ -342,8 +342,8 @@ html:not(.js) .toggle{display:none}
 .frame p{font-size:13px;color:#A7B3D3;line-height:1.45}
 
 /* case studies */
-.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.case{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.case{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,min-height .4s ease}
 .case:hover{box-shadow:0 26px 50px -28px rgba(15,27,61,.35);transform:translateY(-3px)}
 .case::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--accent,var(--blue))}
 .case.feat{background:linear-gradient(165deg,#1E2F60 0%,#0F1B3D 70%);border:0;color:#C5CEE6;padding:32px}
@@ -1471,8 +1471,23 @@ once($('#ring'),t=>t.classList.add('in'),.5);
   F.addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; $$('button',F).forEach(x=>x.setAttribute('aria-pressed',x===b));
     $$('#caseGrid .case').forEach(el=>el.classList.toggle('hide',b.dataset.f!=='all'&&el.dataset.cat!==b.dataset.f)); });
   $$('.detail').forEach(d=>d.inert=true);
+  /* Equal resting height per row, so cards line up when closed, but opening one never stretches its neighbours */
+  function equalize(){ ['#featGrid','#caseGrid'].forEach(sel=>{ const g=$(sel); if(!g) return;
+    const cards=$$('.case',g).filter(c=>c.offsetParent!==null); cards.forEach(c=>{ c.style.transition='none'; c.style.minHeight=''; delete c.dataset.rest; });
+    const restore=()=>requestAnimationFrame(()=>cards.forEach(c=>c.style.transition=''));
+    if(getComputedStyle(g).gridTemplateColumns.split(' ').length<2){ restore(); return; }
+    const rows={}; cards.forEach(c=>{ const d=$('.detail',c); const rest=c.offsetHeight-(d.classList.contains('open')?d.offsetHeight:0); (rows[c.offsetTop]=rows[c.offsetTop]||[]).push([c,rest]); });
+    Object.values(rows).forEach(r=>{ const m=Math.max(...r.map(x=>x[1])); r.forEach(([c])=>{ const d=$('.detail',c); c.dataset.rest=m; c.style.minHeight=(m+(d.classList.contains('open')?d.offsetHeight:0))+'px'; }); });
+    restore(); }); }
+  let eqT; const eqSoon=()=>{ clearTimeout(eqT); eqT=setTimeout(equalize,120); };
+  addEventListener('resize',eqSoon,{passive:true}); addEventListener('load',equalize);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(equalize);
+  F.addEventListener('click',()=>requestAnimationFrame(equalize));
+  $$('[aria-controls="allCases"]').forEach(b=>b.addEventListener('click',()=>setTimeout(equalize,60)));
+  equalize();
   document.addEventListener('click',e=>{ const b=e.target.closest('.more'); if(!b) return; const open=b.getAttribute('aria-expanded')!=='true';
-    b.setAttribute('aria-expanded',open); const d=$('#'+b.getAttribute('aria-controls')); d.classList.toggle('open',open); d.inert=!open; });
+    b.setAttribute('aria-expanded',open); const d=$('#'+b.getAttribute('aria-controls')); d.classList.toggle('open',open); d.inert=!open;
+    const card=b.closest('.case'); if(card&&card.dataset.rest){ const m=+card.dataset.rest; card.style.minHeight=(open?m+d.firstElementChild.scrollHeight:m)+'px'; } });
 })();
 
 /* Typing headlines */
