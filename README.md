@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://rahadportfolio.vercel.app">Portfolio</a> ·
+  <a href="https://rahadarefin.com">Portfolio</a> ·
   <a href="https://linkedin.com/in/rahad-arefin">LinkedIn</a> ·
-  <a href="https://rahadportfolio.vercel.app/#insights">Insights</a> ·
-  <a href="https://rahadportfolio.vercel.app/#work">Case studies</a> ·
+  <a href="https://rahadarefin.com/#insights">Insights</a> ·
+  <a href="https://rahadarefin.com/#work">Case studies</a> ·
   <a href="Rahad_Arefin_Resume.pdf">Resume (PDF)</a>
 </p>
 
@@ -25,7 +25,7 @@
 
 He owns the full growth function: digital marketing strategy, budget and media mix, customer acquisition, funnel and conversion rate optimization (CRO), marketing technology, and the team that executes it. He is known for judging marketing on pipeline and revenue rather than vanity metrics, for using AI and automation to remove manual work, and for advising CEOs on growth problems beyond marketing.
 
-This repository contains the source code of his personal portfolio website, **[rahadportfolio.vercel.app](https://rahadportfolio.vercel.app)**.
+This repository contains the source code of his personal portfolio website, **[rahadarefin.com](https://rahadarefin.com)**.
 
 ## Quick facts
 
@@ -33,7 +33,7 @@ This repository contains the source code of his personal portfolio website, **[r
 | --- | --- |
 | **Name** | Rahad Arefin |
 | **Profession** | Growth marketing leader, digital marketing manager |
-| **Current role** | Digital Marketing Manager, Sylvex Innovation (Sydney, Australia) |
+| **Current role** | Digital Marketing Manager, Sylvex Innovation (Sydney, Australia, remote) |
 | **Based in** | Dhaka, Bangladesh |
 | **Markets** | USA, Canada, United Kingdom, Australia, Bangladesh |
 | **Experience** | 8+ years (since 2018) |
@@ -44,7 +44,7 @@ This repository contains the source code of his personal portfolio website, **[r
 | **Team** | 24 people across PPC, SEO, paid social, creative and content |
 | **Education** | M.Sc. and B.Sc. in Computer Science and Engineering |
 | **Open to** | Head of Digital, Senior Growth Manager and senior growth leadership roles |
-| **Website** | [rahadportfolio.vercel.app](https://rahadportfolio.vercel.app) |
+| **Website** | [rahadarefin.com](https://rahadarefin.com) |
 | **LinkedIn** | [linkedin.com/in/rahad-arefin](https://linkedin.com/in/rahad-arefin) |
 
 ## Key achievements
@@ -110,22 +110,22 @@ This repository contains the source code of his personal portfolio website, **[r
 | Tourism operator | $4,136 revenue from $870 ad spend, 29 bookings | High-intent targeting |
 | NGO donation campaign | 907 micro-donations, 17,000+ clicks in 3 weeks | Meta, Google Display, geo-targeting |
 
-Full context, challenges and approach for each: [rahadportfolio.vercel.app/#work](https://rahadportfolio.vercel.app/#work)
+Full context, challenges and approach for each: [rahadarefin.com/#work](https://rahadarefin.com/#work)
 
 ## Insights: frameworks by Rahad Arefin
 
 Practical playbooks from real accounts, published on his website:
 
-1. **[The first 90 days as Head of Digital: a practical playbook](https://rahadportfolio.vercel.app/insights/first-90-days-head-of-digital.html)**: listen and audit, deliver quick wins, then build the operating system, and what to avoid in month one.
-2. **[Stop judging paid media by CPL: the cost-per-SAL framework](https://rahadportfolio.vercel.app/insights/cost-per-sal-framework.html)**: pipeline metrics, 4- and 13-week lead cohorts, and the CRM counting trap.
-3. **[How I audit a Google Ads account in 90 minutes](https://rahadportfolio.vercel.app/insights/google-ads-audit-90-minutes.html)**: conversion tracking, structure, search terms, ads, landing pages, bidding and a one-page summary.
-4. **[The 80/20 budget rule: how to scale paid media without gambling](https://rahadportfolio.vercel.app/insights/80-20-paid-media-budget-rule.html)**: about 80% behind proven campaigns, about 20% for structured tests.
-5. **[How I built a zero-cost AI reporting pipeline for Google Ads and Meta Ads](https://rahadportfolio.vercel.app/insights/zero-cost-ai-reporting-pipeline.html)**: Google Ads Scripts, one Google Sheet, Meta's connector and Claude, with no paid connector.
+1. **[The first 90 days as Head of Digital: a practical playbook](https://rahadarefin.com/insights/first-90-days-head-of-digital.html)**: listen and audit, deliver quick wins, then build the operating system, and what to avoid in month one.
+2. **[Stop judging paid media by CPL: the cost-per-SAL framework](https://rahadarefin.com/insights/cost-per-sal-framework.html)**: pipeline metrics, 4- and 13-week lead cohorts, and the CRM counting trap.
+3. **[How I audit a Google Ads account in 90 minutes](https://rahadarefin.com/insights/google-ads-audit-90-minutes.html)**: conversion tracking, structure, search terms, ads, landing pages, bidding and a one-page summary.
+4. **[The 80/20 budget rule: how to scale paid media without gambling](https://rahadarefin.com/insights/80-20-paid-media-budget-rule.html)**: about 80% behind proven campaigns, about 20% for structured tests.
+5. **[How I built a zero-cost AI reporting pipeline for Google Ads and Meta Ads](https://rahadarefin.com/insights/zero-cost-ai-reporting-pipeline.html)**: Google Ads Scripts, one Google Sheet, Meta's connector and Claude, with no paid connector.
 
 ## Free tools
 
-- **[Growth Health Check](https://rahadportfolio.vercel.app/#tools)**: eight questions that score a marketing program out of 100 and show its three biggest gaps.
-- **[ROAS calculator](https://rahadportfolio.vercel.app/#tools)**: compares current return on ad spend with a 4.7x benchmark.
+- **[Growth Health Check](https://rahadarefin.com/#tools)**: eight questions that score a marketing program out of 100 and show its three biggest gaps.
+- **[ROAS calculator](https://rahadarefin.com/#tools)**: compares current return on ad spend with a 4.7x benchmark.
 
 ## Education and certifications
 
@@ -154,13 +154,13 @@ Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads and Microsoft Advertising, suppor
 eCommerce and retail, restaurants, grocery and FMCG, real estate, hospitality and travel, B2B SaaS and services, education, and nonprofits.
 
 **How can I contact Rahad Arefin?**
-Through the [contact section of his website](https://rahadportfolio.vercel.app/#contact) or on [LinkedIn](https://linkedin.com/in/rahad-arefin).
+Through the [contact section of his website](https://rahadarefin.com/#contact) or on [LinkedIn](https://linkedin.com/in/rahad-arefin).
 
 ---
 
 ## About this repository
 
-The website is built with plain HTML, CSS and JavaScript, with no framework, no build step and no third-party scripts, so it loads fast and scores 100 for SEO and accessibility in Google Lighthouse. It is hosted on Vercel and deploys automatically from the `main` branch.
+The website is built with plain HTML, CSS and JavaScript, with no framework, no build step and no third-party scripts, so it loads fast and scores 100 for SEO and accessibility in Google Lighthouse. It is hosted on Hostinger at [rahadarefin.com](https://rahadarefin.com) and deploys automatically from the `main` branch.
 
 ```
 index.html                 Homepage: portfolio, case studies, tools, FAQ
@@ -170,11 +170,12 @@ rahad.webp                 Headshot
 og-image.jpg               Link preview image
 Rahad_Arefin_Resume.pdf    Resume
 robots.txt, sitemap.xml    Search engine files
-vercel.json                Security headers
+.htaccess                  HTTPS, redirects, security headers and caching
+vercel.json                Redirects the old portfolio address to rahadarefin.com
 ```
 
 Settings such as the booking link and testimonials live in the `CONFIG` block near the bottom of `index.html`.
 
 Icons from [Lucide](https://lucide.dev) (ISC License). Flags from [flag-icons](https://github.com/lipis/flag-icons) (MIT License).
 
-<p align="center"><sub>© 2026 Rahad Arefin · <a href="https://rahadportfolio.vercel.app">rahadportfolio.vercel.app</a></sub></p>
+<p align="center"><sub>© 2026 Rahad Arefin · <a href="https://rahadarefin.com">rahadarefin.com</a></sub></p>
