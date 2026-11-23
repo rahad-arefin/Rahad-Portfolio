@@ -160,13 +160,16 @@ Through the [contact section of his website](https://rahadarefin.com/#contact) o
 
 ## About this repository
 
-The website is built with plain HTML, CSS and JavaScript, with no framework, no build step and no third-party scripts, so it loads fast and scores 100 for SEO and accessibility in Google Lighthouse. It is hosted on Hostinger at [rahadarefin.com](https://rahadarefin.com) and deploys automatically from the `main` branch.
+The website is built with plain HTML, CSS and JavaScript, with no framework and no build step, so it loads fast and scores 100 for SEO and accessibility in Google Lighthouse. It is hosted on Hostinger at [rahadarefin.com](https://rahadarefin.com) and deploys automatically from the `main` branch.
 
 ```
 index.html                 Homepage: portfolio, case studies, tools, FAQ
 insights/                  Five articles, each with its own share image
 404.html                   Custom not-found page
-rahad.webp                 Headshot
+rahad*.webp                Headshot in several sizes (the browser picks the smallest that looks sharp)
+analytics.js               Google Tag Manager with Consent Mode v2
+llms.txt, *.md             Plain-language summary and Markdown versions of every page for AI assistants
+privacy.html               Privacy page
 og-image.jpg               Link preview image
 Rahad_Arefin_Resume.pdf    Resume
 robots.txt, sitemap.xml    Search engine files

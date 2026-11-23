@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Privacy | Rahad Arefin</title>
+<meta name="description" content="How rahadarefin.com uses analytics: what is measured, what is not, and how to change your choice.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://rahadarefin.com/privacy.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1B3D'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ERA%3C/text%3E%3C/svg%3E">
+<script src="/analytics.js" async></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&amp;display=swap"></noscript>
+<style>:root{
+  --navy:#0F1B3D; --navy-2:#16244D; --navy-3:#1E2F60;
+  --paper:#F5F7FC; --white:#fff;
+  --blue:#2563EB; --blue-2:#1D4FD8; --blue-soft:#EAF0FF; --blue-l:#7EA6FF;
+  --green:#059669; --green-l:#34D399; --green-soft:#E3F7EE;
+  --indigo:#5B4FE0; --indigo-soft:#EEEBFF;
+  --amber:#E7962B; --amber-soft:#FFF3E2;
+  --rose:#E0517A; --rose-soft:#FDEBF1;
+  --text:#2A3553; --muted:#5D6886; --line:#DFE5F1; --line-d:rgba(255,255,255,.1);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font:400 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2{color:var(--navy);margin:0}
+
+/* ===== shared site chrome: nav, menu, buttons, footer ===== */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 max(24px,env(safe-area-inset-right)) 0 max(24px,env(safe-area-inset-left))}
+.i{width:20px;height:20px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.i-sm{width:16px;height:16px}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;padding:12px 18px;border-radius:12px;background:var(--navy);color:#fff;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--blue),var(--green-l));transform-origin:0 50%;transform:scaleX(0);z-index:60}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:600 15.5px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 12px 28px -10px rgba(37,99,235,.55)}
+.btn-blue:hover{background:var(--blue-2)}
+.btn-white{background:#fff;color:var(--navy);border-color:var(--line)}
+.btn-white:hover{border-color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-3)}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 12px 28px -12px rgba(37,211,102,.6)}
+.btn-li{background:#0A66C2;color:#fff;box-shadow:0 12px 28px -12px rgba(10,102,194,.6)}
+.btn svg.b{width:18px;height:18px;fill:currentColor}
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,247,252,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:border-color .2s,background .2s}
+.nav.scrolled{border-color:var(--line);background:rgba(255,255,255,.92)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{font:700 24px/1 var(--serif);color:var(--navy);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--blue)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:14.5px;font-weight:600;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .btn{padding:12px 20px;font-size:14.5px}
+.menu-btn{display:none;background:none;border:0;padding:8px;color:var(--navy);cursor:pointer;min-width:44px;min-height:44px}
+.menu-btn .i{width:26px;height:26px}
+.menu-btn .ic-close,.menu-btn[aria-expanded="true"] .ic-open{display:none}
+.menu-btn[aria-expanded="true"] .ic-close{display:block}
+.mobile-menu{display:none}
+.site-foot{background:#0B1532;color:#A7B3D3;padding:72px 0 0;font-size:15px}
+.site-foot .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.3fr 1.2fr;gap:48px;padding-bottom:56px}
+.brand-l{color:#fff}
+.foot-brand p{margin:18px 0 20px;line-height:1.65;max-width:30em}
+.foot-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(52,211,153,.1);color:#86EFC2;font-size:13.5px;font-weight:600}
+.foot-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green-l);flex-shrink:0}
+.foot-h{margin:0 0 16px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.foot-col{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.foot-col a{color:#A7B3D3;text-decoration:none;padding:6px 0;line-height:1.4;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-cta p:not(.foot-h){margin:0 0 18px;line-height:1.6}
+.foot-cta .btn{padding:13px 20px;font-size:15px}
+.foot-social{display:flex;gap:10px;margin-top:22px}
+.foot-social a{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line-d);color:#C5CEE6;transition:background .2s,color .2s}
+.foot-social a:hover{background:rgba(255,255,255,.12);color:#fff}
+.foot-social svg.b{width:18px;height:18px;fill:currentColor}
+.site-foot .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line-d);padding-top:24px;padding-bottom:calc(28px + env(safe-area-inset-bottom));font-size:14px;color:#8794B8}
+.foot-legal{color:#A7B3D3;margin-left:10px;text-decoration:underline;text-underline-offset:3px}
+.foot-legal:hover{color:#fff}
+.to-top{display:inline-flex;align-items:center;gap:8px;color:#C5CEE6;text-decoration:none;font-weight:600;padding:10px 0}
+.to-top:hover{color:#fff}
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .menu-btn{display:grid;place-items:center}
+  .mobile-menu{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;position:fixed;inset:74px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);padding:10px 24px 24px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:all .2s;box-shadow:0 20px 40px -20px rgba(15,27,61,.3);max-height:calc(100dvh - 74px);overflow-y:auto}
+  .mobile-menu.open{transform:none;opacity:1;visibility:visible}
+  .mobile-menu a{display:block;padding:13px 0;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy);text-decoration:none}
+  .mobile-menu a.btn{grid-column:1/-1;display:flex;justify-content:center;border-bottom:0;padding:14px 20px;margin-top:12px}
+  .mobile-menu a.btn-navy{color:#fff;margin-top:18px}
+  .mobile-menu a.btn-blue{color:#fff;margin-top:10px}
+  .site-foot .foot-grid{grid-template-columns:1fr 1fr;gap:40px 32px}
+}
+@media (max-width:640px){
+  .nav-in{height:64px}
+  .brand{font-size:21px}
+  .nav-cta .btn{display:none}
+  .mobile-menu{inset:64px 0 auto 0;max-height:calc(100dvh - 64px)}
+  .site-foot{padding-top:56px}
+  .site-foot .foot-grid{grid-template-columns:1fr 1fr;gap:36px 20px;padding-bottom:40px}
+  .foot-brand,.foot-cta{grid-column:1/-1}
+  .foot-cta .btn{width:100%;justify-content:center}
+  .site-foot .foot-bottom{flex-direction:column-reverse;align-items:center;text-align:center;gap:4px}
+}
+@media (pointer:coarse){ .brand{padding:12px 0} .foot-col a{padding:9px 0} }
+@media (hover:none){ .btn:hover{transform:none} }
+@media print{ .nav,.progress,.site-foot{display:none!important} }
+
+.legal{max-width:760px;margin:0 auto;padding:64px 24px 88px}
+.legal h1{font:600 clamp(34px,5vw,46px)/1.15 var(--serif);margin-bottom:10px}
+.legal .upd{color:var(--muted);font-size:14.5px;margin:0 0 32px}
+.legal h2{font:600 24px/1.25 var(--serif);margin:36px 0 10px}
+.legal p,.legal li{margin:0 0 12px}
+.legal ul{padding-left:22px;margin:0 0 16px}
+.legal button{font:700 15px/1 var(--sans);min-height:46px;padding:0 22px;border-radius:999px;border:0;background:var(--navy);color:#fff;cursor:pointer}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="/#hero" class="brand">Rahad Arefin<span>.</span></a>
+    <nav class="nav-links" aria-label="Main"><a href="/#philosophy">Philosophy</a><a href="/#impact">Impact</a><a href="/#work">Case studies</a><a href="/#ai">AI systems</a><a href="/#insights">Insights</a><a href="/#leadership">Leadership</a><a href="/#faq">FAQ</a></nav>
+    <div class="nav-cta">
+      <a class="btn btn-navy" href="/#contact">Let’s talk growth</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><svg class="i ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></svg><svg class="i ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="/#philosophy">Philosophy</a><a href="/#impact">Impact</a><a href="/#work">Case studies</a><a href="/#ai">AI systems</a><a href="/#insights">Insights</a><a href="/#tools">Free tools</a><a href="/#leadership">Leadership</a><a href="/#journey">Journey</a><a href="/#faq">FAQ</a><a href="/#contact">Contact</a>
+    <a href="/#contact" class="btn btn-navy">Let’s talk growth</a>
+    <a href="/Rahad_Arefin_Resume.pdf" download class="btn btn-blue" data-track="resume_download"><svg class="i i-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3" /> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <path d="m7 10 5 5 5-5" /></svg>Download resume</a>
+  </div>
+</header>
+<main id="main"><article class="legal">
+<h1>Privacy</h1>
+<p class="upd">Last updated November 21, 2026</p>
+<p>This site exists so you can learn about my work. I keep data collection small and never sell or share it for advertising.</p>
+<h2>What is measured</h2>
+<ul>
+<li><strong>Google Analytics 4</strong> counts visits, pages viewed, where visitors come from, and actions such as downloading my resume or tapping a contact button. Your IP address is not stored by Google Analytics 4.</li>
+<li><strong>Microsoft Clarity</strong> shows anonymised heatmaps and session replays so I can fix confusing parts of the site. Text you type into fields is masked.</li>
+<li>Both tools are loaded through Google Tag Manager and only run with your consent where the law requires it.</li>
+<li>Fonts are loaded from <strong>Google Fonts</strong>, which receives your IP address to deliver them, like any web request.</li>
+</ul>
+<h2>What is not collected</h2>
+<p>No advertising cookies, no ad retargeting, and no forms that store your details on this site. The Growth Health Check and ROAS calculator run entirely in your browser; your answers are not saved.</p>
+<h2>Your choice</h2>
+<p>Visitors in Europe are asked before analytics run. Wherever you are, you can change your choice at any time:</p>
+<p><button type="button" onclick="if(window.raConsent){raConsent.open()}else{alert('Analytics are not active on this site right now.')}">Change my choice</button></p>
+<h2>Contact</h2>
+<p>Questions about your data? Message me on <a href="https://linkedin.com/in/rahad-arefin">LinkedIn</a> or through the <a href="/#contact">contact section</a>.</p>
+</article></main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="/#hero" class="brand brand-l">Rahad Arefin<span>.</span></a>
+      <p>Growth marketing leader. I build scalable revenue engines for brands across the USA, Canada, UK, Australia and Bangladesh.</p>
+      <span class="foot-pill"><span class="dot"></span>Open to Head of Digital roles</span>
+    </div>
+    <nav class="foot-col" aria-label="Explore">
+      <p class="foot-h">Explore</p>
+      <a href="/#philosophy">Philosophy</a><a href="/#impact">Impact</a><a href="/#work">Case studies</a><a href="/#tools">Free tools</a><a href="/#faq">FAQ</a>
+    </nav>
+    <nav class="foot-col" aria-label="Insights">
+      <p class="foot-h">Insights</p>
+      <a href="/insights/first-90-days-head-of-digital.html">First 90 days as Head of Digital</a><a href="/insights/cost-per-sal-framework.html">The cost-per-SAL framework</a><a href="/insights/google-ads-audit-90-minutes.html">Google Ads audit in 90 minutes</a><a href="/insights/80-20-paid-media-budget-rule.html">The 80/20 budget rule</a><a href="/insights/zero-cost-ai-reporting-pipeline.html">Zero-cost AI reporting</a>
+    </nav>
+    <div class="foot-cta">
+      <p class="foot-h">Work with me</p>
+      <p>Hiring a growth leader or need a partner?</p>
+      <a class="btn btn-blue" href="/#contact">Let’s talk growth</a>
+      <div class="foot-social">
+        <a href="https://linkedin.com/in/rahad-arefin" target="_blank" rel="noopener" aria-label="Rahad Arefin on LinkedIn" data-track="contact_click" data-method="linkedin"><svg class="b" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="/Rahad_Arefin_Resume.pdf" download aria-label="Download resume" data-track="resume_download"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3" /> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <path d="m7 10 5 5 5-5" /></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Rahad Arefin. All rights reserved. <a href="/privacy.html" class="foot-legal">Privacy</a></span>
+    <a href="#main" class="to-top">Back to top<svg class="i i-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7" /> <path d="M12 19V5" /></svg></a>
+  </div>
+</footer>
+<script>
+(function(){var nav=document.getElementById('nav'),prog=document.getElementById('progress'),mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
+function setMenu(o){mm.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu');}
+mb.addEventListener('click',function(){setMenu(mb.getAttribute('aria-expanded')!=='true')});
+mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+document.addEventListener('click',function(e){if(mm.classList.contains('open')&&!mm.contains(e.target)&&!mb.contains(e.target))setMenu(false)});
+addEventListener('resize',function(){if(innerWidth>1080&&mm.classList.contains('open'))setMenu(false)},{passive:true});
+addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;nav.classList.toggle('scrolled',scrollY>8);prog.style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
+window.dataLayer=window.dataLayer||[];
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-track]');if(!a)return;var ev={event:a.dataset.track};if(a.dataset.method)ev.method=a.dataset.method;window.dataLayer.push(ev)});
+})();
+</script>
+</body>
+</html>

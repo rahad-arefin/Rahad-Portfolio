@@ -1,0 +1,30 @@
+# Rahad Arefin
+
+> Rahad Arefin is a growth marketing leader based in Dhaka, Bangladesh, with 8+ years building revenue engines for brands across the USA, Canada, the UK, Australia and Bangladesh. He has managed $2.9M+ in ad spend driving $24M+ in attributed revenue at a 4.7x average ROAS, and leads a 24-member team across PPC, SEO, paid social, creative and content. Open to Head of Digital and Senior Growth roles.
+
+This site is his portfolio. Every page has a Markdown version (add .md, or request with Accept: text/markdown).
+
+## Profile
+
+- [Full profile in Markdown](https://rahadarefin.com/index.md): experience, achievements, expertise, 11 case studies, education, certifications and FAQ
+- [Portfolio homepage](https://rahadarefin.com/): the same content as a web page, with interactive tools
+- [Resume (PDF)](https://rahadarefin.com/Rahad_Arefin_Resume.pdf)
+
+## Insights
+
+- [The first 90 days as Head of Digital: a practical playbook](https://rahadarefin.com/insights/first-90-days-head-of-digital.md): How to spend your first 90 days as Head of Digital: listen and audit, deliver quick wins, then build the operating system. What to avoid in month one.
+- [Stop judging paid media by CPL: the cost-per-SAL framework](https://rahadarefin.com/insights/cost-per-sal-framework.md): Cost per lead hides what growth really costs. Learn the cost-per-SAL framework: pipeline metrics, 4- and 13-week lead cohorts, and the CRM counting trap.
+- [How I audit a Google Ads account in 90 minutes](https://rahadarefin.com/insights/google-ads-audit-90-minutes.md): A practical 90-minute Google Ads audit: conversion tracking, structure, search terms, ads, landing pages, bidding, and a one-page summary owners act on.
+- [The 80/20 budget rule: how to scale paid media without gambling](https://rahadarefin.com/insights/80-20-paid-media-budget-rule.md): A simple rule for paid media budgets: about 80% behind proven campaigns, about 20% for structured tests. How to define proven, run tests and rebalance.
+- [How I built a zero-cost AI reporting pipeline for Google Ads and Meta Ads](https://rahadarefin.com/insights/zero-cost-ai-reporting-pipeline.md): Automate Google Ads and Meta Ads reporting without a paid connector: Google Ads Scripts into one Google Sheet, Meta's connector, and Claude for analysis.
+
+## Contact
+
+- [LinkedIn](https://linkedin.com/in/rahad-arefin)
+- [Contact options](https://rahadarefin.com/#contact)
+
+## Optional
+
+- [Free Growth Health Check and ROAS calculator](https://rahadarefin.com/#tools)
+- [Privacy](https://rahadarefin.com/privacy.html)
+- [Source code on GitHub](https://github.com/rahad-arefin/Rahad-Portfolio)
