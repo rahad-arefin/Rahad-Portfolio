@@ -167,7 +167,7 @@ index.html                 Homepage: portfolio, case studies, tools, FAQ
 insights/                  Five articles, each with its own share image
 404.html                   Custom not-found page
 rahad*.webp                Headshot in several sizes (the browser picks the smallest that looks sharp)
-analytics.js               Google Tag Manager with Consent Mode v2
+analytics.js               Google Tag Manager with Consent Mode v2 (GA4 and Clarity run inside Tag Manager)
 llms.txt, *.md             Plain-language summary and Markdown versions of every page for AI assistants
 privacy.html               Privacy page
 og-image.jpg               Link preview image

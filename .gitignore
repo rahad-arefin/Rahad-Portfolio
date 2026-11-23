@@ -1,0 +1,9 @@
+# Never commit secrets: API keys, tokens, passwords or service-account files
+.env
+.env.*
+*.pem
+*.key
+*credentials*.json
+*service-account*.json
+node_modules/
+.DS_Store

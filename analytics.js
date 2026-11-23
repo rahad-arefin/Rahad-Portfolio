@@ -1,16 +1,20 @@
 /*
   Analytics for rahadarefin.com
-  Google Tag Manager with Google Consent Mode v2.
+  Google Tag Manager with Google Consent Mode v2. GA4 and Microsoft Clarity
+  are managed inside Tag Manager (container GTM-K9MBVPF5).
 
-  Your Google Tag Manager container ID is below. Empty the quotes to switch
-  all analytics off; put the ID back to switch them on.
+  These IDs are public by design: every visitor's browser sees them.
+  Analytics only run on rahadarefin.com, so copies of this repository
+  (or local previews) never send data to these accounts.
 */
 var GTM_ID = 'GTM-K9MBVPF5';
+var SITE_HOST = 'rahadarefin.com';
 
 (function () {
-  if (!GTM_ID) return;
   var w = window, d = document;
   w.dataLayer = w.dataLayer || [];
+  if (!GTM_ID || location.hostname !== SITE_HOST) return;
+
   function gtag() { w.dataLayer.push(arguments); }
   w.gtag = gtag;
 
@@ -21,12 +25,11 @@ var GTM_ID = 'GTM-K9MBVPF5';
   var askFirst = /^Europe\//.test(tz) || /^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
   var state = saved ? saved : (askFirst ? 'denied' : 'granted');
 
-  /* This site runs no ads, so advertising storage is always off. */
+  /* No ads on this site, so advertising storage is always off. */
   gtag('consent', 'default', {
     ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
     analytics_storage: state, wait_for_update: 500
   });
-  gtag('set', 'url_passthrough', false);
 
   (function (w, d, s, l, i) {
     w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -65,5 +68,5 @@ var GTM_ID = 'GTM-K9MBVPF5';
   }
 
   /* Used by the "Change my choice" button on /privacy.html */
-  w.raConsent = { open: showBar, state: function () { return saved || state; } };
+  w.raConsent = { open: showBar };
 })();
